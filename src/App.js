@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+// components
 import Header from "./Header";
 import SearchItem from "./SearchItem";
 import AddItem from "./AddItem";
@@ -9,12 +10,14 @@ import apiRequest from "./apiRequest";
 function App() {
   const API_URL = "http://localhost:3000/items";
 
+  // state
   const [items, setItems] = useState([]);
   const [newItem, setNewItem] = useState("");
   const [search, setSearch] = useState("");
   const [fetchError, setFetchError] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
 
+  // fetch items when the component first loads
   useEffect(() => {
     const fetchItems = async () => {
       try {
@@ -38,6 +41,7 @@ function App() {
     }, 1000);
   }, []);
 
+  // add item to the rest api
   const addItem = async (item) => {
     const id = items.length ? items[items.length - 1].id + 1 : 1;
     const myNewItem = {
@@ -62,6 +66,7 @@ function App() {
     }
   };
 
+  // handle check box click
   const handleCheck = async (id) => {
     const listItems = items.map((item) =>
       item.id === id ? { ...item, checked: !item.checked } : item
@@ -69,7 +74,6 @@ function App() {
     setItems(listItems);
 
     // update the item that is getting checked
-
     const myItem = listItems.filter((item) => item.id === id);
     const updateOptions = {
       method: "PATCH",
@@ -85,6 +89,7 @@ function App() {
     }
   };
 
+  // delete the item
   const handleDelete = async (id) => {
     const listItems = items.filter((item) => {
       return item.id !== id;
@@ -100,6 +105,7 @@ function App() {
     }
   };
 
+  // add an item to the rest api when form is submitted
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!newItem) return;
