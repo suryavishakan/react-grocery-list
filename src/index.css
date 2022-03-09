@@ -1,13 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap");
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #353535;
+  color: #fff;
+  font-family: "DM Sans", sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.App,
+main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+
+.App {
+  height: 100vh;
+}
+
+header {
+  color: #639cdd;
+}
+
+button {
+  padding: 0.3rem 0.2rem 0.1rem 0.2rem;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  background-color: #8863dd;
+  color: #fff;
+  margin: 1rem;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+input {
+  padding: 0.5rem;
+  border: none;
+  margin-left: 1rem;
+  font-family: "DM Sans", sans-serif;
+  border-radius: 3px;
+}
+
+input:focus {
+  outline: none;
+  border: none;
+}
+
+li {
+  list-style: none;
+  margin: 1rem;
+}
+
+.trash-btn {
+  color: #dd7563;
+  cursor: pointer;
+  font-size: 0.8rem;
+}
+
+label,
+.trash-btn {
+  margin-left: 1rem;
+}
+
+.trash-btn:hover {
+  opacity: 0.8;
 }
