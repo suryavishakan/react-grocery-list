@@ -1,4 +1,5 @@
 import React from "react";
+// components
 import ItemList from "./ItemList";
 
 const Content = ({ items, handleCheck, handleDelete }) => {
