@@ -1,5 +1,7 @@
+/* google fonts */
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap");
 
+/* default styles */
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -12,6 +14,7 @@ body {
   font-family: "DM Sans", sans-serif;
 }
 
+/* app component */
 .App,
 main {
   display: flex;
