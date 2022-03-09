@@ -1,4 +1,5 @@
 import React from "react";
+// react-icons
 import { FaTrash } from "react-icons/fa";
 
 const Item = ({ item, handleCheck, handleDelete }) => {

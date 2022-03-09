@@ -1,4 +1,5 @@
 import React from "react";
+// components
 import Item from "./Item";
 
 const ItemList = ({ items, handleCheck, handleDelete }) => {
